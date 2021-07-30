@@ -1,4 +1,4 @@
 # azure-codes
-My Azure codes for deployments.
+My Azure commands for quick deployments.
 Easy to use and Free.
 By Ifeanyi Omeata
