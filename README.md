@@ -1,2 +1,3 @@
 # azure-codes
-Azure codes for deployments
+My Azure codes for deployments
+Easy to use and Free.
