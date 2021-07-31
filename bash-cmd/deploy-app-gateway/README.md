@@ -31,3 +31,13 @@ az network vnet subnet create \\\
 --name Subnet2 \\\
 --address-prefix 10.0.1.0/24 
 
+----------------------
+#List Virtual Networks
+----------------------
+az network vnet list -o table\
+az network vnet show -g RG-LAB22 -n vNET-LAB22 -o table
+
+
+
+
+
