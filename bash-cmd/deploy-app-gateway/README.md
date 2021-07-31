@@ -10,6 +10,12 @@ az group create \\\
 --location eastus
 
 ----------------------
+#List Resource Groups
+----------------------
+az group list -o table
+az group show --name RG-LAB22 -o table
+
+----------------------
 #Create Virtual Network with 2 Subnets
 ----------------------
 az network vnet create \\\
