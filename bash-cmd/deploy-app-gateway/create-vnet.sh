@@ -6,8 +6,8 @@ az network vnet create \
 --subnet-name Subnet1 \
 --subnet-prefix 10.0.0.0/24 \
 
-az network vnet subnet create \
---resource-group RG-LAB22 \
---vnet-name vNET-LAB22 \
+az network vnet subnet create \ 
 --name Subnet2 \ 
---address-prefixes 10.0.1.0/24 
+--vnet-name vNET-LAB22 \ 
+--resource-group RG-LAB22 \
+--address-prefixes 10.0.1.0/24
