@@ -10,4 +10,4 @@ az network vnet subnet create \
 --resource-group RG-LAB22 \
 --vnet-name vNET-LAB22 \
 --name Subnet2 \ 
---address-prefix 10.0.1.0/24 
+--address-prefixes 10.0.1.0/24 
