@@ -1,4 +1,6 @@
-#DEPLOY APPLICATION GATEWAY PATH-BASED-ROUTING FOR AZURE VMS
+----------------------
+DEPLOY APPLICATION GATEWAY PATH-BASED-ROUTING FOR AZURE VMS
+----------------------
 
 ----------------------
 #Create Resource Group
