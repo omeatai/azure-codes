@@ -132,7 +132,7 @@ az vm extension set \
 az network nsg create \
   --name NSG-VM3 \
   --resource-group RG-LAB22 \
-  --location eastus
+  --location eastus \
 
 # Create Network Security Group Rule AllowHTTPInbound For NSG-VM3
 az network nsg rule create \
