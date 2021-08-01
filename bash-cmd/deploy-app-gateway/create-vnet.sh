@@ -14,3 +14,4 @@ az network vnet subnet create \
 	--vnet-name vNET-LAB22 \
 	--resource-group RG-LAB22 \
 	--network-security-group "" 
+  
