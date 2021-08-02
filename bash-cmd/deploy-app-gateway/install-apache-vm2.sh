@@ -5,4 +5,4 @@ az vm extension set \
   --name CustomScript \
   --vm-name VM2 \
   --resource-group RG-LAB22 \
-  --settings '{"commandToExecute":"apt-get -y update && apt-get -y install apache2 && echo This is my Project IMAGES Webserver > /var/www/html/images/index.html"}' \
+  --settings '{"commandToExecute":"apt-get -y update && apt-get -y install apache2 && rm -rf /var/www/html && git clone https://github.com/omeatai/my-project-images.git /var/www/html/images"}'

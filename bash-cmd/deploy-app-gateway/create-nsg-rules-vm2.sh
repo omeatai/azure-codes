@@ -10,7 +10,7 @@ az network nsg rule create \
   --destination-address-prefixes 'VirtualNetwork' \
   --destination-port-ranges 80 \
   --access Allow \
-  --priority 200 \
+  --priority 200
 
 # Create Network Security Group Rule AllowSSHInbound For NSG-VM2
 az network nsg rule create \
@@ -24,4 +24,4 @@ az network nsg rule create \
   --destination-address-prefixes 'VirtualNetwork' \
   --destination-port-ranges 22 \
   --access Allow \
-  --priority 100
+  --priority 100	

@@ -6,7 +6,7 @@ az network vnet create \
   --location eastus \
   --network-security-group "" \
   --subnet-name APPGW-Subnet \
-  --subnet-prefixes 10.0.0.0/24 \
+  --subnet-prefixes 10.0.0.0/24
 
 az network vnet subnet create \
   --name BE-Subnet \

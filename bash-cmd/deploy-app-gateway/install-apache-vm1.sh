@@ -5,4 +5,4 @@ az vm extension set \
   --name CustomScript \
   --vm-name VM1 \
   --resource-group RG-LAB22 \
-  --settings '\{"commandToExecute":"apt-get -y update && apt-get -y install apache2 && rm -rf /var/www/html && git clone https://github.com/omeatai/my-profile-app.git /var/www/html/"\}'
+  --settings '{"commandToExecute":"apt-get -y update && apt-get -y install apache2 && rm -rf /var/www/html && git clone https://github.com/omeatai/my-profile-app.git /var/www/html/"}'

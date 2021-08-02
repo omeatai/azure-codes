@@ -122,7 +122,7 @@ az vm extension set \
   &nbsp;&nbsp;&nbsp;&nbsp;--name CustomScript \
   &nbsp;&nbsp;&nbsp;&nbsp;--vm-name VM1 \
   &nbsp;&nbsp;&nbsp;&nbsp;--resource-group RG-LAB22 \
-  &nbsp;&nbsp;&nbsp;&nbsp;--settings '\{"commandToExecute":"apt-get -y update && apt-get -y install apache2 && rm -rf /var/www/html && git clone https://github.com/omeatai/my-profile-app.git /var/www/html/"\}' 
+  &nbsp;&nbsp;&nbsp;&nbsp;--settings '{"commandToExecute":"apt-get -y update && apt-get -y install apache2 && rm -rf /var/www/html && git clone https://github.com/omeatai/my-profile-app.git /var/www/html/"}' 
 
 -----------------------
 #Create a Network Security Group For VM2
@@ -186,7 +186,7 @@ az vm extension set \
   &nbsp;&nbsp;&nbsp;&nbsp;--name CustomScript \
   &nbsp;&nbsp;&nbsp;&nbsp;--vm-name VM2 \
   &nbsp;&nbsp;&nbsp;&nbsp;--resource-group RG-LAB22 \
-  &nbsp;&nbsp;&nbsp;&nbsp;--settings '{"commandToExecute":"apt-get -y update && apt-get -y install apache2 && echo This is my Project IMAGES Webserver > /var/www/html/images/index.html"}' 
+  &nbsp;&nbsp;&nbsp;&nbsp;--settings '{"commandToExecute":"apt-get -y update && apt-get -y install apache2 && rm -rf /var/www/html && git clone https://github.com/omeatai/my-project-images.git /var/www/html/images"}' 
 
 -----------------------
 #Create a Network Security Group For VM3
@@ -250,7 +250,7 @@ az vm extension set \
   &nbsp;&nbsp;&nbsp;&nbsp;--name CustomScript \
   &nbsp;&nbsp;&nbsp;&nbsp;--vm-name VM3 \
   &nbsp;&nbsp;&nbsp;&nbsp;--resource-group RG-LAB22 \
-  &nbsp;&nbsp;&nbsp;&nbsp;--settings '{"commandToExecute":"apt-get -y update && apt-get -y install apache2 && echo This is my Project VIDEOS WebServer > /var/www/html/videos/index.html"}' 
+  &nbsp;&nbsp;&nbsp;&nbsp;--settings '{"commandToExecute":"apt-get -y update && apt-get -y install apache2 && rm -rf /var/www/html && git clone https://github.com/omeatai/my-project-videos.git /var/www/html/videos"}' 
 
 
 
