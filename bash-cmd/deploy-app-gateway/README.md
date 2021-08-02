@@ -109,6 +109,11 @@ az vm create \
   &nbsp;&nbsp;&nbsp;&nbsp;--nsg NSG-VM1 
 
 -----------------------
+#List Virtual Machines
+-----------------------
+az vm list -o table
+
+-----------------------
 #Install Apache Web Service in the Virtual Machine VM1 
 -----------------------
 az vm extension set \
