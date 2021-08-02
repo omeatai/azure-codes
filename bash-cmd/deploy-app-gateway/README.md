@@ -54,6 +54,11 @@ az network nsg create \
   &nbsp;&nbsp;&nbsp;&nbsp;--location eastus 
 
 -----------------------
+#List Network Security Groups
+-----------------------
+az network nsg list -g RG-LAB22 -o table 
+
+-----------------------
 #Create Network Security Group Rule AllowHTTPInbound For NSG-VM1
 -----------------------
 az network nsg rule create \

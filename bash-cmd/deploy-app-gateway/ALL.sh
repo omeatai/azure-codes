@@ -24,7 +24,7 @@ az network vnet subnet create \
 az network nsg create \
   --name NSG-VM1 \
   --resource-group RG-LAB22 \
-  --location eastus \
+  --location eastus 
 
 # Create Network Security Group Rule AllowHTTPInbound For NSG-VM1
 az network nsg rule create \
@@ -38,7 +38,7 @@ az network nsg rule create \
   --destination-address-prefixes 'VirtualNetwork' \
   --destination-port-ranges 80 \
   --access Allow \
-  --priority 200 \
+  --priority 200 
 
 # Create Network Security Group Rule AllowSSHInbound For NSG-VM1
 az network nsg rule create \
