@@ -41,6 +41,11 @@ az network vnet list -o table\
 az network vnet show -g RG-LAB22 -n vNET-LAB22 -o table
 
 -----------------------
+#List Subnets
+-----------------------
+az network vnet subnet list --vnet-name vNET-LAB22 -g RG-LAB22 -o table
+
+-----------------------
 # Create a Network Security Group For VM1
 -----------------------
 az network nsg create \
