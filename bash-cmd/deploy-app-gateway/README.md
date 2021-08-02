@@ -91,6 +91,11 @@ az network nsg rule create \
   &nbsp;&nbsp;&nbsp;&nbsp;--priority 100 
 
 -----------------------
+#List custom Network Security Group Rules
+-----------------------
+az network nsg rule list --nsg-name NSG-VM1 -g RG-LAB22 -o table 
+
+-----------------------
 #Create Virtual Machine VM1
 -----------------------
 az vm create \
