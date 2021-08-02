@@ -132,7 +132,7 @@ az vm extension set \
 az network nsg create \
   --name NSG-VM3 \
   --resource-group RG-LAB22 \
-  --location eastus \
+  --location eastus
 
 # Create Network Security Group Rule AllowHTTPInbound For NSG-VM3
 az network nsg rule create \
@@ -146,7 +146,7 @@ az network nsg rule create \
   --destination-address-prefixes 'VirtualNetwork' \
   --destination-port-ranges 80 \
   --access Allow \
-  --priority 200 \
+  --priority 200
 
 # Create Network Security Group Rule AllowSSHInbound For NSG-VM3
 az network nsg rule create \
@@ -160,7 +160,7 @@ az network nsg rule create \
   --destination-address-prefixes 'VirtualNetwork' \
   --destination-port-ranges 22 \
   --access Allow \
-  --priority 100 \	
+  --priority 100
 
 # Create Virtual Machine VM3 (Project Videos WebServer)
 az vm create \
@@ -171,7 +171,7 @@ az vm create \
   --image UbuntuLTS \
   --vnet-name vNET-LAB22 \
   --subnet BE-Subnet \
-  --nsg NSG-VM3 \
+  --nsg NSG-VM3
 
 # Install Apache Web Service in the Virtual Machine VM3 (Project Videos WebServer)
 az vm extension set \
@@ -181,7 +181,7 @@ az vm extension set \
   --vm-name VM3 \
   --resource-group RG-LAB22 \
   --settings '{"commandToExecute":"apt-get -y update && apt-get -y install apache2 && echo This is my Project VIDEOS WebServer > /var/www/html/videos/index.html"}' \
-
+  --settings '{"commandToExecute":"apt-get -y update && apt-get -y install apache2 && rm -rf /var/www/html && mkdir -pf /var/www/html/videos && echo This is my Project VIDEOS WebServer > /var/www/html/videos/index.html"}'
 
 
 
