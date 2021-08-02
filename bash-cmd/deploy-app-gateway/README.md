@@ -46,7 +46,7 @@ az network vnet show -g RG-LAB22 -n vNET-LAB22 -o table
 az network vnet subnet list --vnet-name vNET-LAB22 -g RG-LAB22 -o table
 
 -----------------------
-# Create a Network Security Group For VM1
+#Create a Network Security Group For VM1
 -----------------------
 az network nsg create \
   &nbsp;&nbsp;&nbsp;&nbsp;--name NSG-VM1 \
@@ -54,7 +54,7 @@ az network nsg create \
   &nbsp;&nbsp;&nbsp;&nbsp;--location eastus 
 
 -----------------------
-# Create Network Security Group Rule AllowHTTPInbound For NSG-VM1
+#Create Network Security Group Rule AllowHTTPInbound For NSG-VM1
 -----------------------
 az network nsg rule create \
   &nbsp;&nbsp;&nbsp;&nbsp;--name AllowHTTPInbound \
@@ -70,7 +70,7 @@ az network nsg rule create \
   &nbsp;&nbsp;&nbsp;&nbsp;--priority 200 
 
 -----------------------
-# Create Network Security Group Rule AllowSSHInbound For NSG-VM1
+#Create Network Security Group Rule AllowSSHInbound For NSG-VM1
 -----------------------
 az network nsg rule create \
   &nbsp;&nbsp;&nbsp;&nbsp;--name AllowSSHInbound \
@@ -86,7 +86,7 @@ az network nsg rule create \
   &nbsp;&nbsp;&nbsp;&nbsp;--priority 100 
 
 -----------------------
-# Create Virtual Machine VM1
+#Create Virtual Machine VM1
 -----------------------
 az vm create \
   &nbsp;&nbsp;&nbsp;&nbsp;--name VM1 \
@@ -99,7 +99,7 @@ az vm create \
   &nbsp;&nbsp;&nbsp;&nbsp;--nsg NSG-VM1 
 
 -----------------------
-# Install Apache Web Service in the Virtual Machine VM1 
+#Install Apache Web Service in the Virtual Machine VM1 
 -----------------------
 az vm extension set \
   &nbsp;&nbsp;&nbsp;&nbsp;--publisher Microsoft.Azure.Extensions \
@@ -110,7 +110,7 @@ az vm extension set \
   &nbsp;&nbsp;&nbsp;&nbsp;--settings '\{"commandToExecute":"apt-get -y update && apt-get -y install apache2 && rm -rf /var/www/html && git clone https://github.com/omeatai/my-profile-app.git /var/www/html/"\}' 
 
 -----------------------
-# Create a Network Security Group For VM2
+#Create a Network Security Group For VM2
 -----------------------
 az network nsg create \
   &nbsp;&nbsp;&nbsp;&nbsp;--name NSG-VM2 \
@@ -118,7 +118,7 @@ az network nsg create \
   &nbsp;&nbsp;&nbsp;&nbsp;--location eastus 
 
 -----------------------
-# Create Network Security Group Rule AllowHTTPInbound For NSG-VM2
+#Create Network Security Group Rule AllowHTTPInbound For NSG-VM2
 -----------------------
 az network nsg rule create \
   &nbsp;&nbsp;&nbsp;&nbsp;--name AllowHTTPInbound \
@@ -134,7 +134,7 @@ az network nsg rule create \
   &nbsp;&nbsp;&nbsp;&nbsp;--priority 200 
 
 -----------------------
-# Create Network Security Group Rule AllowSSHInbound For NSG-VM2
+#Create Network Security Group Rule AllowSSHInbound For NSG-VM2
 -----------------------
 az network nsg rule create \
   &nbsp;&nbsp;&nbsp;&nbsp;--name AllowSSHInbound \
@@ -150,7 +150,7 @@ az network nsg rule create \
   &nbsp;&nbsp;&nbsp;&nbsp;--priority 100 	
 
 -----------------------
-# Create Virtual Machine VM2
+#Create Virtual Machine VM2
 -----------------------
 az vm create \
   &nbsp;&nbsp;&nbsp;&nbsp;--name VM2 \
@@ -163,7 +163,7 @@ az vm create \
   &nbsp;&nbsp;&nbsp;&nbsp;--nsg NSG-VM2 
 
 -----------------------
-# Install Apache Web Service in the Virtual Machine VM2 (Project Images WebServer)
+#Install Apache Web Service in the Virtual Machine VM2 (Project Images WebServer)
 -----------------------
 az vm extension set \
   &nbsp;&nbsp;&nbsp;&nbsp;--publisher Microsoft.Azure.Extensions \
@@ -174,7 +174,7 @@ az vm extension set \
   &nbsp;&nbsp;&nbsp;&nbsp;--settings '{"commandToExecute":"apt-get -y update && apt-get -y install apache2 && echo This is my Project IMAGES Webserver > /var/www/html/images/index.html"}' 
 
 -----------------------
-# Create a Network Security Group For VM3
+#Create a Network Security Group For VM3
 -----------------------
 az network nsg create \
   &nbsp;&nbsp;&nbsp;&nbsp;--name NSG-VM3 \
@@ -182,7 +182,7 @@ az network nsg create \
   &nbsp;&nbsp;&nbsp;&nbsp;--location eastus 
 
 -----------------------
-# Create Network Security Group Rule AllowHTTPInbound For NSG-VM3
+#Create Network Security Group Rule AllowHTTPInbound For NSG-VM3
 -----------------------
 az network nsg rule create \
   &nbsp;&nbsp;&nbsp;&nbsp;--name AllowHTTPInbound \
@@ -198,7 +198,7 @@ az network nsg rule create \
   &nbsp;&nbsp;&nbsp;&nbsp;--priority 200 
 
 -----------------------
-# Create Network Security Group Rule AllowSSHInbound For NSG-VM3
+#Create Network Security Group Rule AllowSSHInbound For NSG-VM3
 -----------------------
 az network nsg rule create \
   &nbsp;&nbsp;&nbsp;&nbsp;--name AllowSSHInbound \
@@ -214,7 +214,7 @@ az network nsg rule create \
   &nbsp;&nbsp;&nbsp;&nbsp;--priority 100 
 
 -----------------------
-# Create Virtual Machine VM3 (Project Videos WebServer)
+#Create Virtual Machine VM3 (Project Videos WebServer)
 -----------------------
 az vm create \
   &nbsp;&nbsp;&nbsp;&nbsp;--name VM3 \
@@ -227,7 +227,7 @@ az vm create \
   &nbsp;&nbsp;&nbsp;&nbsp;--nsg NSG-VM3 
 
 -----------------------
-# Install Apache Web Service in the Virtual Machine VM3 (Project Videos WebServer)
+#Install Apache Web Service in the Virtual Machine VM3 (Project Videos WebServer)
 -----------------------
 az vm extension set \
   &nbsp;&nbsp;&nbsp;&nbsp;--publisher Microsoft.Azure.Extensions \
