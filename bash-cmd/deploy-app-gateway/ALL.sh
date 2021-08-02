@@ -126,7 +126,7 @@ az vm extension set \
   --name CustomScript \
   --vm-name VM2 \
   --resource-group RG-LAB22 \
-  --settings '{"commandToExecute":"apt-get -y update && apt-get -y install apache2 && rm -rf /var/www/html && mkdir -pf /var/www/html/images && echo This is my Project IMAGES WebServer > /var/www/html/images/index.html"}'
+  --settings '{"commandToExecute":"apt-get -y update && apt-get -y install apache2 && rm -rf /var/www/html && git clone https://github.com/omeatai/my-project-images.git /var/www/html/images"}'
 
 # Create a Network Security Group For VM3
 az network nsg create \
@@ -180,8 +180,7 @@ az vm extension set \
   --name CustomScript \
   --vm-name VM3 \
   --resource-group RG-LAB22 \
-  --settings '{"commandToExecute":"apt-get -y update && apt-get -y install apache2 && echo This is my Project VIDEOS WebServer > /var/www/html/videos/index.html"}' \
-  --settings '{"commandToExecute":"apt-get -y update && apt-get -y install apache2 && rm -rf /var/www/html && mkdir -pf /var/www/html/videos && echo This is my Project VIDEOS WebServer > /var/www/html/videos/index.html"}'
+  --settings '{"commandToExecute":"apt-get -y update && apt-get -y install apache2 && rm -rf /var/www/html && git clone https://github.com/omeatai/my-project-videos.git /var/www/html/videos"}'
 
 
 
