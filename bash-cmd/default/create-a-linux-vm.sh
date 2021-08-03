@@ -4,5 +4,5 @@ az vm create \
   --admin-username adminuser \
   --admin-password admin123123! \
   --image UbuntuLTS \
-  --public-ip-address ""
+  --public-ip-address "" \
   
