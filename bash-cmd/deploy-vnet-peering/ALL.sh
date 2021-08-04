@@ -101,7 +101,21 @@ az network vnet peering create \
     --vnet-name vNET-2 \
     --allow-vnet-access
 
+#Connect Global Peer vNET-1 to vNET-3
+az network vnet peering create \
+    --name vNET-1-to-vNET-3 \
+    --remote-vnet vNET-3 \
+    --resource-group RG-LAB23 \
+    --vnet-name vNET-1 \
+    --allow-vnet-access
 
+#Connect Global Peer vNET-3 to vNET-1
+az network vnet peering create \
+    --name vNET-3-to-vNET-1 \
+    --remote-vnet vNET-1 \
+    --resource-group RG-LAB23 \
+    --vnet-name vNET-3 \
+    --allow-vnet-access
 
 
 
