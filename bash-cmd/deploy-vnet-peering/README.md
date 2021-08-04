@@ -1,5 +1,5 @@
 -----------------------
-DEPLOY GLOVAL AND LOCAL VIRTUAL NETWORK PEERING ON AZURE
+DEPLOY GLOBAL AND LOCAL VIRTUAL NETWORK PEERING ON AZURE
 -----------------------
 
 -----------------------
