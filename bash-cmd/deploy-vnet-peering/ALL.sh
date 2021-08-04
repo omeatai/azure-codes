@@ -1,17 +1,16 @@
-#Create Resource Group
+#Create Resource Group Eastus
 az group create \
-  --name RG-LAB22 \
+  --name RG-LAB23 \
   --location eastus
 
-az group create --name RG-14-CONNECT-vNETs --location westeurope
-
+#Create Virtual Network 1
 az network vnet create \
-    --resource-group RG-14-CONNECT-vNETs \
-    --name vNET-A \
+    --resource-group RG-LAB23 \
+    --name vNET-1 \
     --address-prefix 10.0.0.0/16 \
-    --subnet-name Subnet-01-vNET-A \
+    --subnet-name Subnet-1 \
     --subnet-prefix 10.0.0.0/24 \
-    --location westeurope
+    --location eastus
 
 az network vnet create \
     --resource-group RG-14-CONNECT-vNETs \
