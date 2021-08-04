@@ -56,14 +56,20 @@ az vm create \
     --admin-username azureadmin \
     --admin-password admin123123!
 
+#Create VM-3
 az vm create \
-    --resource-group RG-14-CONNECT-vNETs \
+    --resource-group RG-LAB23  \
     --no-wait \
-    --name VM-C \
-    --location northeurope \
-    --vnet-name vNET-C \
-    --subnet Subnet-01-vNET-C \
+    --name VM-3 \
+    --location westeurope \
+    --vnet-name vNET-3 \
+    --subnet Subnet-3\
     --image UbuntuLTS \
     --size Standard_B1s \
-    --admin-username adminuser \
-    --admin-password adminadmin123!
+    --admin-username azureadmin \
+    --admin-password admin123123!
+
+
+
+
+    
