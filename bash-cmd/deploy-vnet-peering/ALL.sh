@@ -30,17 +30,18 @@ az network vnet create \
     --subnet-prefix 10.2.0.0/24 \
     --location westeurope
 
+#Create VM-1
 az vm create \
-    --resource-group RG-14-CONNECT-vNETs \
+    --resource-group RG-LAB23 \
     --no-wait \
-    --name VM-A \
-    --location westeurope \
-    --vnet-name vNET-A \
-    --subnet Subnet-01-vNET-A \
+    --name VM-1 \
+    --location eastus \
+    --vnet-name vNET-1 \
+    --subnet Subnet-1 \
     --image UbuntuLTS \
     --size Standard_B1s \
-    --admin-username adminuser \
-    --admin-password adminadmin123!
+    --admin-username azureadmin \
+    --admin-password admin123123!
 
 az vm create \
     --resource-group RG-14-CONNECT-vNETs \
