@@ -69,7 +69,40 @@ az vm create \
     --admin-username azureadmin \
     --admin-password admin123123!
 
+#Connect Global Peer vNET-2 to vNET-3
+az network vnet peering create \
+    --name vNET-2-to-vNET-3 \
+    --remote-vnet vNET-3 \
+    --resource-group RG-LAB23 \
+    --vnet-name vNET-2 \
+    --allow-vnet-access
+
+#Connect Global Peer vNET-3 to vNET-2
+az network vnet peering create \
+    --name vNET-3-to-vNET-2 \
+    --remote-vnet vNET-2 \
+    --resource-group RG-LAB23 \
+    --vnet-name vNET-3 \
+    --allow-vnet-access
+
+#Connect Local Peer vNET-1 to vNET-2
+az network vnet peering create \
+    --name vNET-1-to-vNET-2 \
+    --remote-vnet vNET-2 \
+    --resource-group RG-LAB23 \
+    --vnet-name vNET-1 \
+    --allow-vnet-access
+
+#Connect Local Peer vNET-2 to vNET-1
+az network vnet peering create \
+    --name vNET-2-to-vNET-1 \
+    --remote-vnet vNET-1 \
+    --resource-group RG-LAB23 \
+    --vnet-name vNET-2 \
+    --allow-vnet-access
 
 
 
-    
+
+
+
