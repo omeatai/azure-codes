@@ -27,14 +27,14 @@ az vm create \
 
 #Create VM-2
 az vm create \
-    --resource-group RG-LAB23 \
+    --resource-group RG-LAB24 \
     --no-wait \
     --name VM-2 \
     --location eastus \
-    --vnet-name vNET-2 \
-    --subnet Subnet-2 \
-    --image UbuntuLTS \
-    --size Standard_B1s \
+    --vnet-name vNET-LAB24 \
+    --subnet mySubnet \
+    --image win2016datacenter \
+    --size Standard_B2s \
     --admin-username azureadmin \
     --admin-password admin123123!
 
